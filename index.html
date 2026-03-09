@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterbender Side Scroller</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="row">
+      <div>Health: <span id="healthText">100</span></div>
+      <div class="bar"><div id="healthBar"></div></div>
+    </div>
+    <div class="row">
+      <div>Wave: <span id="waveText">1</span></div>
+      <div>Level: <span id="levelText">1</span></div>
+      <div>Score: <span id="scoreText">0</span></div>
+    </div>
+    <div class="row small">WASD move, Space jump, drag orb with mouse, release to launch, Shift while dragging = ice</div>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div id="overlayCard"></div>
+  </div>
+
+  <canvas id="game" width="1200" height="700"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
