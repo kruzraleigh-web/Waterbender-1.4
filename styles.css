@@ -1,0 +1,79 @@
+:root {
+  --bg: #0b1324;
+  --panel: rgba(10, 18, 34, 0.8);
+  --text: #d8ebff;
+  --accent: #6ec6ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #173a67 0%, #0b1324 60%);
+  overflow: hidden;
+}
+#game {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #274a74;
+  background: linear-gradient(#7fd0ff 0%, #92d6ff 45%, #87b5d4 46%, #6784a1 100%);
+}
+#hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: var(--panel);
+  border: 1px solid #385f85;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 420px;
+}
+.row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.row.small { font-size: 12px; opacity: 0.9; }
+.bar {
+  width: 180px;
+  height: 14px;
+  border: 1px solid #77b4e0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+#healthBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #58ff9f, #d9ff6e);
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 20;
+}
+#overlay.hidden { display: none; }
+#overlayCard {
+  width: min(720px, 90vw);
+  border-radius: 12px;
+  border: 2px solid #88d5ff;
+  background: #0c1d35;
+  padding: 16px;
+}
+#overlayCard h2 { margin-top: 0; }
+#overlayCard button {
+  margin: 6px 6px 0 0;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #3d8ad2;
+  color: #fff;
+  cursor: pointer;
+}
+#overlayCard button:hover { background: #56a1e8; }
